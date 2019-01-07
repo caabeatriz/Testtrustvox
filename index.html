@@ -11,15 +11,40 @@
 <body>
     <main>
         <h1>Workout Log </h1>
+
+        
         <div class="insert-item">
-            <h2>Inser item</h2>
-            <input type="number" placeholder="Time spent">
-            <select name="inser-item_Select" id="inser-item_Select">
+            <h2>Insert an item</h2>
+            <form action="">
+            <input type="number" placeholder="Time spent" id="inputNumber">
+            <select name="inser-item_Select" id="insert-item_Select" >
                 <option value="run">Run</option>
                 <option value="swimming">Swimming</option>
                 <option value="bike">Bike</option>
             </select>
+            <input type="date" name="date" id="inputDate">
+            <button id="insert-item_button"> Add</button>
+            <hr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tempo</th>
+                        <th>Tempo</th>
+                        <th>Tempo</th>
+                    </tr>        
+                </thead>    
+                <tbody>
+
+                </tbody>                                   
+                
+                </table>
+            </form>
+
+            <div class="contador">
+                <h2 class="contador_horas">10 horas de exercicio</h2>
+            </div>
         </div>
+    
     </main>
 </body>
 </html>
