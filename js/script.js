@@ -1,3 +1,4 @@
+
 const btnAdd = document.querySelector("#insert-item_button");
 
 btnAdd.addEventListener("click", function(event){
@@ -20,6 +21,9 @@ btnAdd.addEventListener("click", function(event){
     const selectTd = document.createElement("td")
     const dateTd = document.createElement("td")
 
+    //**Adiciona uma classe ao que vc quer recuperar depois
+    timeTd.className = "tempo-exercicio"
+
 
     // altera o valor das tds com os input value
     timeTd.textContent = time;
@@ -41,20 +45,28 @@ btnAdd.addEventListener("click", function(event){
     btnDeleteTask.addEventListener("click", function (eventdelete) {
         eventdelete.preventDefault()
         tableTr.remove()
+        resultado.textContent = calcular()
     })
-    
-    
+        
     tableTr.appendChild(btnDeleteTask)
     const table = document.querySelector("#table-activits")
     table.appendChild(tableTr)  
+  
 
-    function Calcular(){
-        var resultado = document.querySelector(".resultado")
+    var resultado = document.querySelector(".resultado")
+    resultado.textContent = calcular()
 
-        
-    }
-
-    
 })
 
+
+function calcular(){
+
+    var listaTemposExercicios = document.querySelectorAll(".tempo-exercicio"); //Tem que retornar um array com todos os tempos
+    
+    var totalTempo = 0
+    for (elemento of listaTemposExercicios){
+        totalTempo += parseInt(elemento.textContent)
+    }
+    return totalTempo
+}
 
