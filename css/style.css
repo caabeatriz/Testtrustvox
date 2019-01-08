@@ -39,18 +39,30 @@ body{
     text-align: center;
 }
 
-
+#insert-item_button{
+    width: 39px;
+    padding: 0.2rem;
+    background-color: white;
+    border: 2px solid;
+    box-shadow: 5px solid 10px;
+    box-shadow: 2px 2px;
+}
 
 
 
 #inputNumber{
-    width: 83px;
-    border: 1px solid;
-    padding: 3px;
+   
+    padding: 0.4rem;
+    width: 19%;
+    margin-left: 20px;
+    border: 2px solid;
 }
 
 #selectForm{
-    width: 55px;
+    margin-right: 72px;
+    padding: 0.2rem;
+    margin-left: 11px;
+    border: 2px solid;
 }
 
 .btnDeleteTask{
