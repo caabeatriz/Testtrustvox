@@ -48,7 +48,11 @@ body{
     box-shadow: 2px 2px;
 }
 
-
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid;
+}
 
 #inputNumber{
    
@@ -56,6 +60,25 @@ body{
     width: 19%;
     margin-left: 20px;
     border: 2px solid;
+}
+
+#inputDate{
+    width: 80px;
+    border: 2px solid;
+    padding: 0.2rem;
+}
+
+thead{
+    background-color: #cccccc;
+}
+
+table{
+    border: 2px solid;
+    width: 100%;
+}
+
+th, thead, td{
+    border:none !important;
 }
 
 #selectForm{
@@ -66,15 +89,29 @@ body{
 }
 
 .btnDeleteTask{
-    color: black;
-    display: flex;
-    box-shadow: none;
-    width: 7%;
-    margin-right: 5px;
-    margin-top: 4px;
+    color: red;
     padding: 7px;
-    font-size: 11px;
     font-weight: 600; 
-    border-radius: 100%;
-    border: red;
+    font-size: 1rem;
+    text-align: center;    
+}
+
+
+.tr-cor{
+    background-color: #D4DDE0;
+}
+
+tr:nth-child(even) {
+    background-color: #FEFEFE;
+}
+
+.cabecalho{
+    background-color: #cccccc;
+}
+
+.resultado{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 24px;
+    font-weight: 100;
 }
