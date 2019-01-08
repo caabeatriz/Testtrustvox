@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+    background-color: #FAFAFA;
+    
+}
+
+.container{
+    width: 510px;
+    margin: 0 auto;
+    margin-top: 100px;
+    /* height: 500px; */
+    
+
+}
+
+.tasks{
+    border: 2px solid;
+    /* width: 78%; */
+    height: 57px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insert-item{
+    text-align: center;
+    font-size: x-large;
+    margin-top: 5vh;
+
+}
+.title_task{
+    text-align: center;
+}
+
+
+
+
+
+#inputNumber{
+    width: 83px;
+    border: 1px solid;
+    padding: 3px;
+}
+
+#selectForm{
+    width: 55px;
+}
+
+.btnDeleteTask{
+    color: black;
+    display: flex;
+    box-shadow: none;
+    width: 7%;
+    margin-right: 5px;
+    margin-top: 4px;
+    padding: 7px;
+    font-size: 11px;
+    font-weight: 600; 
+    border-radius: 100%;
+    border: red;
+}
