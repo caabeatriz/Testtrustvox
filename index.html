@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Teste</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
 </head>
+
 <body>
     <main>
-        <h1>Workout Log </h1>        
-        <div class="insert-item">
-            <h2>Insert an item</h2>
-            <form id="form_insert-item">
-            <input type="number" placeholder="Time spent" id="inputNumber">
-            <select name="inser-item_Select" id="selectForm" >
-                <option value="run">Run</option>
-                <option value="swimming">Swimming</option>
-                <option value="bike">Bike</option>
-            </select>
-            <input type="date" name="date" id="inputDate">
-            <button id="insert-item_button"> Add</button>
+        <div class="container">
+            <h1 class="title_task">Workout Log </h1>
+
+            <section class="task">
+
+                <div class="insert-item">
+                    <h6>Insert an item</h6>
+                </div>
+                <div class="tasks">
+                    <form id="form_insert-item">
+                        <input type="number" placeholder="Time spent" id="inputNumber">
+                        <select name="inser-item_Select" id="selectForm">
+                            <option value="run">Run</option>
+                            <option value="swimming">Swimming</option>
+                            <option value="bike">Bike</option>
+                        </select>
+
+                        <input type="date" name="date" id="inputDate" placeholder="_/_/_">
+                        <button id="insert-item_button"> Add</button>
+                </div>
+
+            </section>
             <hr>
             <table>
                 <thead>
                     <tr>
                         <th>Tempo</th>
-                        <th>Tempo</th>
-                        <th>Tempo</th>
-                    </tr>        
-                </thead>    
+                        <th>Tipo</th>
+                        <th>Data</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
                 <tbody id="table-activits">
 
-                </tbody>                                   
-                
-                </table>
+                </tbody>
+
+            </table>
             </form>
 
             <div class="contador">
-                <h2 class="contador_horas">10 horas de exercicio</h2>
+              <h3 class="resultado"></h3>
             </div>
         </div>
-    
+        </div>
     </main>
     <script src="js/script.js"></script>
 </body>
