@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+
+
 </head>
 
 <body>
@@ -36,11 +38,11 @@
 
             </section>
             <hr>
-            <table>
+            <table class="sortable" >
                 <thead>
                     <tr class="cabecalho">
-                        <th>Tempo</th>
-                        <th>Tipo</th>
+                        <th onclick="sortTable(0)">Tempo</th>
+                        <th onclick="sortTable(1)">Tipo</th>
                         <th>Data</th>
                         <th>Excluir</th>
                     </tr>
@@ -53,12 +55,20 @@
             </form>
 
             <div class="contador">
-              <h3 class="resultado"></h3>
-              
+                <h3 class="resultado"></h3>
+
             </div>
         </div>
         </div>
+
+        <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
     </main>
+
+    <script src="js/sorttable.js"></script>
     <script src="js/script.js"></script>
 </body>
 
