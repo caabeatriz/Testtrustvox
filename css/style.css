@@ -77,9 +77,7 @@ table{
     width: 100%;
 }
 
-th, thead, td{
-    border:none !important;
-}
+
 
 #selectForm{
     margin-right: 72px;
