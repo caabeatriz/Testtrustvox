@@ -3,41 +3,33 @@ const btnAdd = document.querySelector("#insert-item_button");
 const date = document.querySelector("#inputDate")
 
 
-date.addEventListener("focus", function (event) {
-    date.value = "__/__/____"
-    setTimeout(function () {
-        date.setSelectionRange(0, 0)
-    }, 1)
-})
+// date.addEventListener("focus", function (event) {
+//     date.value = "__/__/____"
+//     setTimeout(function () {
+//         date.setSelectionRange(0, 0)
+//     }, 1)
+// })
 
 
-date.addEventListener("keydown", function(event) {
-    event.preventDefault()
-    if("0123456789".indexOf(event.key) !== -1
-        && this.value.indexOf("_") !== -1) {
-            this.value = this.value.replace(/_/, event.key)
-            const next_index = this.value.indexOf("_")
-            this.setSelectionRange(next_index, next_index)
-    } else if (event.key === "Backspace") {
-        this.value = this.value.replace(/(\d$)|(\d(?=\D+$))/, "_")
-        const next_index = this.value.indexOf("_")
-        this.setSelectionRange(next_index, next_index)
-    }
-})
+// date.addEventListener("keydown", function(event) {
+//     event.preventDefault()
+//     if("0123456789".indexOf(event.key) !== -1
+//         && this.value.indexOf("_") !== -1) {
+//             this.value = this.value.replace(/_/, event.key)
+//             const next_index = this.value.indexOf("_")
+//             this.setSelectionRange(next_index, next_index)
+//     } else if (event.key === "Backspace") {
+//         this.value = this.value.replace(/(\d$)|(\d(?=\D+$))/, "_")
+//         const next_index = this.value.indexOf("_")
+//         this.setSelectionRange(next_index, next_index)
+//     }
+// })
 
 
 
 btnAdd.addEventListener("click", function (event) {
-
-
-
-    event.preventDefault()
-   
-
-    
+    event.preventDefault()  
     const form = document.querySelector("#form_insert-item")
-
-
     console.log(form.inputNumber.value)
     console.log(form.selectForm.value)
 
@@ -73,7 +65,7 @@ btnAdd.addEventListener("click", function (event) {
 
 
     // validação dos campos
-    if (inputNumber.value === undefined || inputNumber.value === null || inputNumber.value === "" || inputNumber.value === " ") {
+    if (inputNumber.value === undefined || inputNumber.value === null || inputNumber.value === "" || inputNumber.value === " " ) {
         alert("Insira as horas")
         inputNumber.focus();
         return false;
@@ -81,8 +73,15 @@ btnAdd.addEventListener("click", function (event) {
         alert("Insira a data") 
         inputDate.focus();
         return false;
+    }else if (inputNumber.value > 24 || inputNumber.value < 1){
+        alert('Insira um valor menor que 24 horas e maior que 1 hora')
+        inputNumber.focus()
+        return false
     }
 
+
+
+   
 
 
     // validação da data
@@ -131,79 +130,19 @@ function calcular() {
     var totalTempo = 0
 
     for (elemento of listaTemposExercicios) {
-        totalTempo += parseInt(elemento.textContent)
+        totalTempo += parseFloat(elemento.textContent)
     }
 
 
     return (totalTempo + espaco + texto)
 }
 
-// function clickCounter() {
-//     if (typeof(Storage) !== "undefined") {
-//       if (localStorage.clickcount) {
-//         localStorage.clickcount = Number(localStorage.clickcount)+1;
-//       } else {
-//         localStorage.clickcount = 1;
-//       }
-//       document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
-//     } else {
-//       document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-//     }
-//   }
 
-const btn = document.querySelector(".testebtn")
-
-btn.addEventListener("click", function(e){
-    e.preventDefault()
-    const table = document.querySelector("#testetable")
-    const linha = document.createElement("tr")
-    const timeTd = document.createElement("td")
-
-    timeTd.textContent = testando()
-
-linha.appendChild(timeTd)
-table.appendChild(linha)
-
-    
-    console.log("outroteste", table)
-})
-
-function testando(){
-    localStorage.getItem("tarefa")
+$('#inputDate').val(dataAtualFormatada);
+function dataAtualFormatada(){
+    var data = new Date(),
+        dia  = data.getDate().toString().padStart(2, '0'),
+        mes  = (data.getMonth()+1).toString().padStart(2, '0'), 
+        ano  = data.getFullYear();
+    return dia+"/"+mes+"/"+ano;
 }
-
-  function storage1 (){
- 
-    const form = document.querySelector("#form_insert-item")
-    const input = form.inputNumber.value
-    const select =  form.selectForm.value
-    const linha = document.createElement("tr")
-    const timeTd = document.createElement("td")
-
-    timeTd.textContent = input
-
-    linha.appendChild(timeTd)
-
-    const table = document.querySelector("#testetable")
-    table.appendChild(linha)
-
-
-    if(typeof(Storage) !== "undefined"){
-        
-
-        document.getElementById("teste1").innerHTML = " testando" + input +"select>" + select
-    }else {
-        document.getElementById("teste1").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-
-    window.localStorage.setItem('tarefa', input)
-    window.localStorage.setItem('select', select)
-    var jsonTarefa = window.localStorage.getItem('tarefa');
-
-    var tarefa = JSON.parse(jsonTarefa);
-
-console.log(tarefa.id);
-    console.log(jsonTarefa, "aaa")
-
-    console.log("aaaaaa")
-  }
