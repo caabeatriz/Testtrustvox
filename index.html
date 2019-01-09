@@ -32,17 +32,17 @@
                             <option value="bike">Bike</option>
                         </select>
 
-                        <input type="text" name="date" id="inputDate" placeholder="_/_/_">
+                        <input type="text" name="date" id="inputDate" placeholder="_/_/_" n>
                         <button id="insert-item_button"> Add</button>
-                </div>
-
+                    
+                    </form>
             </section>
             <hr>
-            <table class="sortable" >
+            <table class="sortable">
                 <thead>
                     <tr class="cabecalho">
-                        <th onclick="sortTable(0)">Tempo</th>
-                        <th onclick="sortTable(1)">Tipo</th>
+                        <th>Tempo</th>
+                        <th>Tipo</th>
                         <th>Data</th>
                         <th>Excluir</th>
                     </tr>
@@ -52,22 +52,14 @@
                 </tbody>
 
             </table>
-            </form>
-
             <div class="contador">
                 <h3 class="resultado"></h3>
-
             </div>
-        </div>
-        </div>
 
-        <p><button onclick="clickCounter()" type="button">Click me!</button></p>
-<div id="result"></div>
-<p>Click the button to see the counter increase.</p>
-<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
-
+        </div>
     </main>
-
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="js/sorttable.js"></script>
     <script src="js/script.js"></script>
 </body>
