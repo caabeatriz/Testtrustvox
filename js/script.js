@@ -1,31 +1,5 @@
 
 const btnAdd = document.querySelector("#insert-item_button");
-const date = document.querySelector("#inputDate")
-
-
-// date.addEventListener("focus", function (event) {
-//     date.value = "__/__/____"
-//     setTimeout(function () {
-//         date.setSelectionRange(0, 0)
-//     }, 1)
-// })
-
-
-// date.addEventListener("keydown", function(event) {
-//     event.preventDefault()
-//     if("0123456789".indexOf(event.key) !== -1
-//         && this.value.indexOf("_") !== -1) {
-//             this.value = this.value.replace(/_/, event.key)
-//             const next_index = this.value.indexOf("_")
-//             this.setSelectionRange(next_index, next_index)
-//     } else if (event.key === "Backspace") {
-//         this.value = this.value.replace(/(\d$)|(\d(?=\D+$))/, "_")
-//         const next_index = this.value.indexOf("_")
-//         this.setSelectionRange(next_index, next_index)
-//     }
-// })
-
-
 
 btnAdd.addEventListener("click", function (event) {
     event.preventDefault()  
@@ -37,10 +11,8 @@ btnAdd.addEventListener("click", function (event) {
     const select = form.selectForm.value
     const date = form.inputDate.value
 
-    // criei a linha
+    // cria a linha
     const tableTr = document.createElement("tr")
-
-
 
     // cria as colunas
     const timeTd = document.createElement("td")
@@ -61,9 +33,6 @@ btnAdd.addEventListener("click", function (event) {
     tableTr.appendChild(selectTd)
     tableTr.appendChild(dateTd)
 
-
-
-
     // validação dos campos
     if (inputNumber.value === undefined || inputNumber.value === null || inputNumber.value === "" || inputNumber.value === " " ) {
         alert("Insira as horas")
@@ -77,17 +46,7 @@ btnAdd.addEventListener("click", function (event) {
         alert('Insira um valor menor que 24 horas e maior que 1 hora')
         inputNumber.focus()
         return false
-    }
-
-
-
-   
-
-
-    // validação da data
-
-
-
+    } 
 
     // cria uma div para colocar o botao delete e insere ele com inner 
     const btnDeleteTask = document.createElement("div")
@@ -101,26 +60,14 @@ btnAdd.addEventListener("click", function (event) {
         resultado.textContent = calcular()
     })
 
-    tableTr.appendChild(btnDeleteTask)
-
-    
- 
-    
-   
-   
+    tableTr.appendChild(btnDeleteTask)   
     const table = document.querySelector("#table-activits")
     table.appendChild(tableTr)
-
 
     var resultado = document.querySelector(".resultado")
     resultado.textContent = calcular()
 
-
-   
-    
-
 })
-
 
 function calcular() {
 
@@ -133,11 +80,10 @@ function calcular() {
         totalTempo += parseFloat(elemento.textContent)
     }
 
-
     return (totalTempo + espaco + texto)
 }
 
-
+// formatar data para data Brasil
 $('#inputDate').val(dataAtualFormatada);
 function dataAtualFormatada(){
     var data = new Date(),
@@ -146,3 +92,5 @@ function dataAtualFormatada(){
         ano  = data.getFullYear();
     return dia+"/"+mes+"/"+ano;
 }
+
+
