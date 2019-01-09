@@ -7,3 +7,4 @@ Teste realizado para vaga front-end
 - Escolha a data que realizou o exercício, ele ja atribui a data atual 
 - Clique no botão 'add' e ele irá implementar na tabela abaixo
 
+### Versões mobile e desktop
