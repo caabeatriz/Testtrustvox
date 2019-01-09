@@ -104,6 +104,10 @@ btnAdd.addEventListener("click", function (event) {
 
     tableTr.appendChild(btnDeleteTask)
 
+    
+ 
+    
+   
    
     const table = document.querySelector("#table-activits")
     table.appendChild(tableTr)
@@ -114,7 +118,7 @@ btnAdd.addEventListener("click", function (event) {
 
 
    
-
+    
 
 })
 
@@ -134,33 +138,72 @@ function calcular() {
     return (totalTempo + espaco + texto)
 }
 
-function clickCounter() {
-    if (typeof(Storage) !== "undefined") {
-      if (localStorage.clickcount) {
-        localStorage.clickcount = Number(localStorage.clickcount)+1;
-      } else {
-        localStorage.clickcount = 1;
-      }
-      document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
-    } else {
-      document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-  }
+// function clickCounter() {
+//     if (typeof(Storage) !== "undefined") {
+//       if (localStorage.clickcount) {
+//         localStorage.clickcount = Number(localStorage.clickcount)+1;
+//       } else {
+//         localStorage.clickcount = 1;
+//       }
+//       document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+//     } else {
+//       document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+//     }
+//   }
 
+const btn = document.querySelector(".testebtn")
+
+btn.addEventListener("click", function(e){
+    e.preventDefault()
+    const table = document.querySelector("#testetable")
+    const linha = document.createElement("tr")
+    const timeTd = document.createElement("td")
+
+    timeTd.textContent = testando()
+
+linha.appendChild(timeTd)
+table.appendChild(linha)
+
+    
+    console.log("outroteste", table)
+})
+
+function testando(){
+    localStorage.getItem("tarefa")
+}
 
   function storage1 (){
  
     const form = document.querySelector("#form_insert-item")
+    const input = form.inputNumber.value
+    const select =  form.selectForm.value
+    const linha = document.createElement("tr")
+    const timeTd = document.createElement("td")
+
+    timeTd.textContent = input
+
+    linha.appendChild(timeTd)
+
+    const table = document.querySelector("#testetable")
+    table.appendChild(linha)
 
 
-    console.log(form.inputNumber.value)
-    console.log(form.selectForm.value)
-
-    const time = form.inputNumber.value + "h"
     if(typeof(Storage) !== "undefined"){
-        if (form.inputNumber.value){
-            console.log(aaa)
-        }
+        
+
+        document.getElementById("teste1").innerHTML = " testando" + input +"select>" + select
+    }else {
+        document.getElementById("teste1").innerHTML = "Sorry, your browser does not support web storage...";
     }
 
+    window.localStorage.setItem('tarefa', input)
+    window.localStorage.setItem('select', select)
+    var jsonTarefa = window.localStorage.getItem('tarefa');
+
+    var tarefa = JSON.parse(jsonTarefa);
+
+console.log(tarefa.id);
+    console.log(jsonTarefa, "aaa")
+
+    console.log("aaaaaa")
   }
