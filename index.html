@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,38 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-
-
 </head>
-
 <body>
     <main>
         <div class="container">
-            <h1 class="title_task">Workout Log </h1>
-
+            <h1 class="title_task">Workout Log</h1>
             <section class="task">
-
                 <div class="insert-item">
                     <h6>Insert an item</h6>
                 </div>
                 <div class="tasks">
                     <form id="form_insert-item">
-                        <input type="number" placeholder="Time spent" id="inputNumber">
-                        <select name="inser-item_Select" id="selectForm">
+                        <input type="number" placeholder="Time spent" id="inputNumber" class="formModality_inputTime">
+                        <select name="inser-item_Select" id="selectForm" class="formModality_select">
                             <option value="run">Run</option>
                             <option value="swimming">Swimming</option>
                             <option value="bike">Bike</option>
                         </select>
-
-                        <input type="text" name="date" id="inputDate" placeholder="_/_/_" n>
-                        <button id="insert-item_button"> Add</button>
-                    
+                        <input type="text" name="date" id="inputDate" placeholder="_/_/_" class="formModality_inputDate">
+                        <button id="insert-item_button" class="formModality_buttonAdd"> Add</button>                    
                     </form>
             </section>
-            <hr>
-            <table class="sortable">
-                <thead>
+            <hr class="linha-separadora">
+            <table class="sortable tableInformation">
+                <thead class="tableInformation_thead">
                     <tr class="cabecalho">
                         <th>Tempo</th>
                         <th>Tipo</th>
@@ -47,21 +38,15 @@
                         <th>Excluir</th>
                     </tr>
                 </thead>
-                <tbody id="table-activits">
-
-                </tbody>
-
+                <tbody id="table-activits"></tbody>
             </table>
             <div class="contador">
                 <h3 class="resultado"></h3>
             </div>
-
         </div>
-    </main>
-    
+    </main>    
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="js/sorttable.js"></script>
     <script src="js/script.js"></script>
 </body>
-
 </html>
