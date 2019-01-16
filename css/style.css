@@ -6,17 +6,14 @@
 
 body{
     font-family: 'OpenSans', Arial, Helvetica, sans-serif;
-    background-color: #FAFAFA;
-    
+    background-color: #FAFAFA;  
 }
-
 .container{
     width: 510px;
-    margin: 0 auto;
-    margin-top: 100px;   
+    margin: 100px auto;
 }
-
 .tasks{
+    
     border: 2px solid;
     height: 57px;
     margin: 0 auto;
@@ -24,62 +21,48 @@ body{
     align-items: center;
     justify-content: center;
 }
-
 .insert-item{
     text-align: center;
     font-size: x-large;
-    margin-top: 5vh;
-
+    margin: 5vh;
 }
 .title_task{
     text-align: center;
 }
-
-#insert-item_button{
+.formModality_buttonAdd{
     width: 39px;
     padding: 0.2rem;
     background-color: white;
     border: 2px solid;
-    box-shadow: 5px solid 10px;
     box-shadow: 2px 2px;
 }
-
-hr{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.linha-separadora{
+    margin: 20px 0 20px 0;
     border: 1px solid;
 }
-
-#inputNumber{
-   
+.formModality_inputTime{
     padding: 0.4rem;
     width: 19%;
-    margin-left: 20px;
+    margin:0 0 0 20px;
     border: 2px solid;
 }
-
-#inputDate{
+.formModality_inputDate{
     width: 80px;
     border: 2px solid;
     padding: 0.2rem;
 }
-
-thead{
+.tableInformation_thead{
     background-color: #cccccc;
 }
-
-table{
+.tableInformation{
     border: 2px solid;
     width: 100%;
 }
-
-#selectForm{
-    margin-right: 72px;
+.formModality_select{
+    margin: 0 72px 0 11px;
     padding: 0.2rem;
-    margin-left: 11px;
     border: 2px solid;
 }
-
 .btnDeleteTask{
     color: red;
     padding: 7px;
@@ -87,8 +70,6 @@ table{
     font-size: 1rem;
     text-align: center;    
 }
-
-
 .tr-cor{
     background-color: #D4DDE0;
 }
@@ -104,55 +85,43 @@ tr:nth-child(even) {
 .resultado{
     font-size: 2rem;
     text-align: center;
-    margin-top: 24px;
+    margin: 24px;
     font-weight: 100;
 }
 
-
 @media(max-width:768px){
 
-   
     .tasks{
         width: 50%;
-        height: 120px;
+        height: 120px; 
     }
-
-    #inputNumber {
+    .formModality_inputTime {
         padding: 0.5rem;
         width: 45%;
-        margin-left: 8px;
+        margin:0 0 0 8px;
         font-size: 1rem;
     }
-
-    #selectForm{
+    .formModality_select{
         padding: 0.4rem;
-        margin-left: 0;
-        margin-right: 0;
+        margin: 0 auto;
         font-size: 1rem;
     }
-
-    #inputDate{
+    .formModality_inputDate{
         width: 45%;
         padding: 0.5rem;
-        margin-top: 11px;
-        margin-left: 8px;
+        margin: 11px 0 0 8px;
     }
-
-    #insert-item_button{
+    .formModality_buttonAdd{
         width: 45%;
         padding: 0.5rem;
-    }
-    
-    table{
+    }    
+    .tableInformation{
         border: 2px solid;
-        width: 55%;
-        margin: 0 auto;
+        width: 89%;
+        margin: 20px auto;
         text-align: center;
-        margin-top: 20px;
     }
-
-    hr{
+    .linha-separadora{
         display: none;
     }
-
 }
