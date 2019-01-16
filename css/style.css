@@ -13,25 +13,23 @@ body{
     margin: 100px auto;
 }
 .tasks{
-    
-    border: 2px solid;
     height: 57px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid;
 }
 .insert-item{
-    text-align: center;
-    font-size: x-large;
     margin: 5vh;
+    font-size: x-large;
+    text-align: center; 
 }
 .title_task{
     text-align: center;
 }
 .formModality_buttonAdd{
     width: 39px;
-    padding: 0.2rem;
+    padding: 0.2rem;    
     background-color: white;
     border: 2px solid;
     box-shadow: 2px 2px;
@@ -41,22 +39,22 @@ body{
     border: 1px solid;
 }
 .formModality_inputTime{
-    padding: 0.4rem;
     width: 19%;
     margin:0 0 0 20px;
+    padding: 0.4rem;   
     border: 2px solid;
 }
 .formModality_inputDate{
     width: 80px;
-    border: 2px solid;
     padding: 0.2rem;
+    border: 2px solid;    
 }
 .tableInformation_thead{
     background-color: #cccccc;
 }
 .tableInformation{
-    border: 2px solid;
     width: 100%;
+    border: 2px solid;    
 }
 .formModality_select{
     margin: 0 72px 0 11px;
@@ -64,62 +62,57 @@ body{
     border: 2px solid;
 }
 .btnDeleteTask{
-    color: red;
     padding: 7px;
-    font-weight: 600; 
     font-size: 1rem;
+    font-weight: 600; 
     text-align: center;    
+    color: red;
 }
 .tr-cor{
     background-color: #D4DDE0;
 }
-
 tr:nth-child(even) {
     background-color: #FEFEFE;
 }
-
 .cabecalho{
     background-color: #cccccc;
 }
-
 .resultado{
-    font-size: 2rem;
-    text-align: center;
     margin: 24px;
+    font-size: 2rem;
     font-weight: 100;
+    text-align: center;
 }
-
 @media(max-width:768px){
-
     .tasks{
         width: 50%;
         height: 120px; 
     }
     .formModality_inputTime {
-        padding: 0.5rem;
         width: 45%;
         margin:0 0 0 8px;
+        padding: 0.5rem;
         font-size: 1rem;
     }
     .formModality_select{
-        padding: 0.4rem;
         margin: 0 auto;
+        padding: 0.4rem;        
         font-size: 1rem;
     }
     .formModality_inputDate{
         width: 45%;
-        padding: 0.5rem;
         margin: 11px 0 0 8px;
+        padding: 0.5rem;        
     }
     .formModality_buttonAdd{
         width: 45%;
         padding: 0.5rem;
     }    
     .tableInformation{
-        border: 2px solid;
         width: 89%;
         margin: 20px auto;
         text-align: center;
+        border: 2px solid;       
     }
     .linha-separadora{
         display: none;
