@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Teste</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>Teste</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <div class="container">
-            <h1 class="title_task">Workout Log</h1>
-            <section class="task">
-                <div class="insert-item">
-                    <h6>Insert an item</h6>
-                </div>
-                <div class="tasks">
-                    <form id="form_insert-item">
-                        <input type="number" placeholder="Time spent" id="inputNumber" class="formModality_inputTime">
-                        <select name="inser-item_Select" id="selectForm" class="formModality_select">
-                            <option value="run">Run</option>
-                            <option value="swimming">Swimming</option>
-                            <option value="bike">Bike</option>
-                        </select>
-                        <input type="text" name="date" id="inputDate" placeholder="_/_/_" class="formModality_inputDate">
-                        <button id="insert-item_button" class="formModality_buttonAdd"> Add</button>                    
-                    </form>
-            </section>
-            <hr class="linha-separadora">
-            <table class="sortable tableInformation">
-                <thead class="tableInformation_thead">
-                    <tr class="cabecalho">
-                        <th>Tempo</th>
-                        <th>Tipo</th>
-                        <th>Data</th>
-                        <th>Excluir</th>
-                    </tr>
-                </thead>
-                <tbody id="table-activits"></tbody>
-            </table>
-            <div class="contador">
-                <h3 class="resultado"></h3>
-            </div>
-        </div>
-    </main>    
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="js/sorttable.js"></script>
-    <script src="js/script.js"></script>
+	<main>
+		<div class="container">
+			<h1 class="title_task">Workout Log</h1>
+			<section class="task">
+				<div class="insert-item">
+					<h6>Insert an item</h6>
+				</div>
+				<div class="tasks">
+					<form id="formModality" name="form_insert-item">
+						<input class="formModality_inputTime" id="inputNumber" placeholder="Time spent" type="number"> 
+						<select class="formModality_select" id="selectForm" name="inser-item_Select">
+							<option value="run">
+								Run
+							</option>
+							<option value="swimming">
+								Swimming
+							</option>
+							<option value="bike">
+								Bike
+							</option>
+						</select> <input class="formModality_inputDate" id="inputDate" name="date" placeholder="_/_/_" type="text"> <button class="formModality_buttonAdd" id="insert-item_button">Add</button>
+					</form>
+				</div>
+			</section>
+			<hr class="linha-separadora">
+			<table class="sortable tableInformation">
+				<thead class="tableInformation_thead">
+					<tr class="cabecalho">
+						<th>Tempo</th>
+						<th>Tipo</th>
+						<th>Data</th>
+						<th>Excluir</th>
+					</tr>
+				</thead>
+				<tbody id="table-activits"></tbody>
+			</table>
+			<div class="contador">
+				<h3 class="resultado"></h3>
+			</div>
+		</div>
+	</main>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript">
+	</script> 
+	<script src="js/sorttable.js">
+	</script> 
+	<script src="js/script.js">
+	</script>
 </body>
 </html>
